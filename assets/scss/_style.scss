@@ -1,0 +1,397 @@
+$color-1: crimson;
+$color-2: #777777;
+$textColor: #fff;
+$textColor2 :#000;
+
+/*Radius*/
+
+@mixin radius($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+    border-radius: $radius;
+}
+
+
+/*Transition*/
+
+@mixin transition($transition) {
+    -webkit-transition: all ease-in-out $transition !important;
+    -moz-transition: all ease-in-out $transition !important;
+    -ms-transition: all ease-in-out $transition !important;
+    transition: all ease-in-out $transition !important;
+}
+
+
+/*Delay*/
+
+@mixin delay($delay) {
+    -webkit-transition-delay: $delay;
+    -moz-transition-delay: $delay;
+    -ms-transition-delay: $delay;
+    transition-delay: $delay;
+}
+
+
+/*Flex center*/
+
+@mixin flexCenter() {
+    align-items: center;
+    -webkit-align-items: center;
+    justify-content: center;
+    -webkit-justify-content: center;
+    display: flex;
+}
+
+
+/*Reset ul*/
+
+@mixin resetUl() {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+/*Box shadow*/
+
+@mixin boxShadow() {
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+}
+
+
+/*=========================================== Main style =============================================*/
+
+body {
+    font-family: Roboto, "Open Sans", sans-serif;
+    font-size: 16px;
+    color: $textColor2;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+    color: #1c1c1c;
+    font-family: bold;
+}
+
+h1 {
+    font-size: 50px;
+}
+
+h2 {
+    font-size: 48px;
+}
+
+h3 {
+    font-size: 25px;
+}
+
+h4 {
+    font-size: 30px;
+}
+
+h5 {
+    font-size: 20px;
+}
+
+h6 {
+    font-size: 16px;
+}
+
+a {
+    @include transition(.3s);
+    opacity: 1;
+    color: $color-1;
+    &:hover,
+    &:focus {
+        text-decoration: none;
+        color: darken($color-2, 10%);
+    }
+}
+
+
+/*Button*/
+
+button,
+a,
+.btn {
+    @include radius(0px);
+    //background: transparent;
+    &:hover,
+    &:focus,
+    &:active {
+        box-shadow: none !important;
+        outline: 0 !important;
+        cursor: pointer;
+    }
+}
+
+.btn {
+    border: none;
+    font-family: regular;
+    font-size: 14px;
+    padding: 10px 25px;
+    &.btn-lg {
+        padding: 15px 40px;
+        font-size: 18px;
+    }
+    &.btn-sm {
+        padding: 5px 15px;
+        font-size: 12px;
+    }
+    &.btn-primary {
+        background-color: $color-1;
+        color: $textColor;
+        border: 1px solid transparent;
+        font-family: regular;
+        &:hover,
+        &:active,
+        &:focus {
+            background-color: $color-1;
+            color: $textColor;
+            border: 1px solid $color-1;
+        }
+    }
+    &.btn-more {
+        margin-top: 50px;
+    }
+}
+
+.btn-primary:not(:disabled):not(.disabled):active {
+    background-color: $color-1;
+    color: $textColor;
+    border: 1px solid $color-1;
+}
+
+.form-control {
+    font-size: 18px;
+    &:focus,
+    &:active {
+        outline: 0;
+        box-shadow: none;
+    }
+}
+
+section {
+    padding-top: 55px;
+    padding-bottom: 55px;
+}
+
+.no-gutters {
+    padding: 0;
+    margin: 0;
+}
+
+// ========================================= main-section ======================================
+.main-section {
+    height: 100vh;
+    background-image: url(../images/events-heavenly-header.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    position: relative;
+    .content-page {
+        background: rgba($color-1, .5);
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        @include flexCenter();
+        .menu {
+            position: fixed;
+            left: 0;
+            z-index: 9999999;
+            top: 0;
+            .body-nav {
+                background: #1e202b;
+                padding: 35px 50px;
+                height: 100vh;
+                #close {
+                    position: absolute;
+                    top: 10px;
+                    right: 20px;
+                    font-size: 20px;
+                    cursor: pointer;
+                    color: $textColor
+                }
+                ul {
+                    @include resetUl();
+                    li {
+                        margin: 10px 0;
+                        a {
+                            color: $textColor;
+                            font-size: 27px;
+                            &:hover {
+                                color: $color-1;
+                            }
+                        }
+                    }
+                    .active {
+                        a {
+                            color: $color-1;
+                        }
+                    }
+                }
+            }
+        }
+        .layout {
+            position: relative;
+            height: 100%;
+            width: 1000%;
+            @include flexCenter();
+            .text-box {
+                margin: 0 auto;
+                text-align: center;
+                h1 {
+                    color: $textColor;
+                }
+                p {
+                    color: $textColor;
+                }
+            }
+            #open {
+                position: absolute;
+                top: 50%;
+                left: 10px;
+                font-size: 20px;
+                cursor: pointer;
+                color: $textColor;
+            }
+        }
+    }
+}
+
+// ========================================= tab-section ======================================
+.tab-section {
+    h2 {
+        padding: 0 15px;
+        border: 1px solid #ccc;
+        @include radius(3px);
+        text-align: center;
+        background: rgba($color: $color-1, $alpha: 0.5);
+        color: $textColor;
+        margin: 0;
+        cursor: pointer;
+    }
+    p {
+        background: #CCCCCC;
+        padding: 20px;
+        margin: 0;
+        text-align: center;
+        display: none;
+        &:first-of-type {
+            display: block;
+        }
+    }
+}
+
+// ========================================= Event-day ======================================
+.Event-day {
+    background-image: url(../images/invitation-2508607__340.jpg);
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    &::after {
+        content: " ";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background: rgba($color: $color-1, $alpha: 0.5);
+        z-index: 0;
+    }
+    .item {
+        border: 1px solid $textColor;
+        z-index: 999;
+        position: relative;
+        @include flexCenter();
+        padding: 50px;
+        h5 {
+            margin: 20px 0 10px 0;
+            color: $textColor;
+            font-size: 25px;
+            font-weight: 900;
+        }
+    }
+}
+
+// ========================================= form-section ======================================
+.form-section {
+    color: $color-2;
+    .contact-ul {
+        @include resetUl();
+        text-align: center;
+        li {
+            margin-bottom: 15px;
+            padding-left: 20px;
+            i {
+                display: inline-block;
+                margin-right: 10px;
+            }
+            p {
+                display: inline-block;
+                color: $color-2;
+            }
+        }
+    }
+    .social-ul {
+        @include resetUl();
+        li {
+            display: inline-block;
+            border: 1px solid $color-2;
+            margin: 5px;
+            @include transition(.3s);
+            padding: 5px 10px;
+            a {
+                font-size: 22px;
+                font-weight: bold;
+                color: $color-2;
+            }
+            &:hover {
+                background: $color-1;
+                a {
+                    color: $textColor;
+                }
+            }
+        }
+    }
+    form {
+        input,
+        textarea {
+            &::placeholder {
+                color: $color-2;
+                opacity: .7;
+            }
+        }
+        .btn {
+            text-transform: uppercase;
+        }
+        p {
+            span {
+                color: $color-1;
+                font-size: 30px;
+            }
+        }
+    }
+}

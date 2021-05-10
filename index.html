@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task JQ</title>
+    <link rel="stylesheet" href="./assets/css/main-ltr.css">
+    <!-- <link rel="stylesheet" href="./assets/css/main-rtl.css"> -->
+</head>
+
+<body>
+    <!-- ========================= main-section =============================-->
+    <section class="main-section" id="main-section">
+        <div class="container-fluid no-gutters">
+            <div class="content-page">
+                <div class="menu">
+                    <div class="body-nav">
+                        <i id="close" class="icofont-close"></i>
+                        <ul class="nav-linkGo">
+                            <li class="active"><a href="#main-section">Home</a></li>
+                            <li><a href="#tab-section">Duration</a></li>
+                            <li><a href="#Event-day">Details</a></li>
+                            <li><a href="#form-section">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="layout">
+                    <div class="text-box ">
+                        <h1>Egyption Party</h1>
+                        <p>Let's have Fun</p>
+                    </div>
+                    <div id="open">
+                        <i class="icofont-navigation-menu "></i> open
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ========================= f main-section =============================
+            ========================== tab-section ============================= -->
+    <section class="tab-section" id="tab-section">
+        <div class="container">
+            <div class="col-md-8 m-auto">
+                <h2 class="headT">Singer one</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti quae consequuntur magni? Earum ab corporis sequi totam quae voluptatum ipsam eveniet odio. Itaque sequi nihil voluptates saepe veniam nostrum totam.</p>
+                <h2 class="headT">Singer two</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti quae consequuntur magni? Earum ab corporis sequi totam quae voluptatum ipsam eveniet odio. Itaque sequi nihil voluptates saepe veniam nostrum totam.</p>
+                <h2 class="headT">Singer three</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti quae consequuntur magni? Earum ab corporis sequi totam quae voluptatum ipsam eveniet odio. Itaque sequi nihil voluptates saepe veniam nostrum totam.</p>
+                <h2 class="headT">Singer four</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti quae consequuntur magni? Earum ab corporis sequi totam quae voluptatum ipsam eveniet odio. Itaque sequi nihil voluptates saepe veniam nostrum totam.</p>
+            </div>
+        </div>
+    </section>
+    <!-- ========================= f tab-section =============================
+    ========================== Event-day ============================= -->
+    <section class="Event-day" id="Event-day">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="item">
+                        <h5 id="days"></h5>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="item">
+                        <h5 id="hours"></h5>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="item">
+                        <h5 id="minutes"></h5>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="item">
+                        <h5 id="seconds"></h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ========================= f Event-day =============================
+            ========================== contact us ============================= -->
+    <section class="form-section" id="form-section">
+        <div class="container">
+            <div>
+                <h3>JOIN US</h3>
+                <p class="text-center">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>CONTACT INFO</h5>
+                    <p class="text-center">Why you should hire me writeup Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque nascetur ridiculus mus.</p>
+                    <ul class="contact-ul">
+                        <li>
+                            <i class="icofont-location-pin"></i>
+                            <p>New Street 22545, Nexa Road, New York City, USA</p>
+                        </li>
+                        <li>
+                            <i class="icofont-ui-message"></i>
+                            <p> hello@uigrid.com</p>
+                        </li>
+                        <li>
+                            <i class="icofont-phone"></i>
+                            <p> 001-000-000-000</p>
+                        </li>
+                    </ul>
+                    <ul class="social-ul">
+                        <li><a href=""><i class="icofont-facebook"></i></a></li>
+                        <li><a href=""><i class="icofont-twitter"></i></a></li>
+                        <li><a href=""><i class="icofont-google-plus"></i></a></li>
+                        <li><a href=""><i class="icofont-github"></i></a></li>
+                        <li><a href=""><i class="icofont-behance"></i></a></li>
+                        <li><a href=""><i class="icofont-dribbble"></i></a></li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <form action="">
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="inputAddress" placeholder="Enter Name">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control" id="inputAddress" placeholder="Enter Email">
+                        </div>
+                        <div class="form-group">
+                            <textarea name="" id="textAr" cols="30" rows="10" class="form-control" placeholder="Enter message"></textarea>
+                        </div>
+                        <p><span id="num-length">100</span> Characyer Reamining</p>
+                        <button class="btn btn-danger" id="btnSend" type="submit">Send message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="./assets/js/all.min.js "></script>
+    <script src="./assets/js/internal.js "></script>
+</body>
+
+</html>
